@@ -4,6 +4,7 @@ A module containing helper functions regardings paths, files, and folders.
 
 import os
 
+
 def create_folder_if_not_exist(model_folder, print0=True):
     if not os.path.exists(model_folder):
         if print0:
@@ -67,5 +68,3 @@ def file_is_python(file1):
     Python (.py)  will be a central file format in many projects. Gathering test for that format here.
     """
     return get_file_extension(file1, print0=False) == ".py"
-
-

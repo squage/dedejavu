@@ -2,6 +2,7 @@
 import json
 import os
 
+
 def json_dumper(dict_to_save, filepath, print0=True):
     """
     Standardizing json saving.
@@ -52,7 +53,6 @@ def make_tuple_key_jsonable(key, entry_sep="__", value_type_sep="@@"):
             t = "str"
         else:
             raise Exception("Sorry, non-allowed data type")
-            #t = "?"
         list0.append("".join([str(x), value_type_sep, t]))
     return entry_sep.join(list0)
 
@@ -72,6 +72,3 @@ def reconstruct_tuple_key(t0, entry_sep="__", value_type_sep="@@"):
         else:
             out.append(value)
     return tuple(out)
-
-#if __name__ == '__main__':
-#    print(__package__)
